@@ -1,4 +1,4 @@
-package com.exam.brnquiz;
+package com.exam.brnquiz.model;
 
 public class Question {
 
@@ -8,6 +8,18 @@ public class Question {
 
     public Question() {
 
+    }
+
+    public void setAnswers(String[] answers) {
+        this.answers = answers;
+    }
+
+    public void setCorrectIndex(int correctIndex) {
+        this.correctIndex = correctIndex;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public String getQuestion() {

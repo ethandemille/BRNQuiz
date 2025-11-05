@@ -19,7 +19,7 @@
         <ListView
             android:id="@+id/listQ"
             android:layout_width="match_parent"
-            android:layout_height="378dp" />
+            android:layout_height="403dp" />
 
         <Button
             android:id="@+id/submitButton"
