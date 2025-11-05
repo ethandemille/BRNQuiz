@@ -18,7 +18,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class IntroActivity extends AppCompatActivity {
 
-    private static final int AUDIO_PERMISSION_CODE = 1;
     private Button beginButton;
 
     @Override
@@ -33,7 +32,7 @@ public class IntroActivity extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.RECORD_AUDIO},
-                    AUDIO_PERMISSION_CODE);
+                    101);
         }
 
         beginButton = findViewById(R.id.begin);

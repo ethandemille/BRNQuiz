@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.exam.brnquiz.model.Question;
@@ -33,6 +34,7 @@ public class QuestionFragment extends Fragment {
     private ListView listView;
     private Button submitButton;
     private Question q;
+    private TextView tvQuestion;
     BRNViewModel model;
 
     public QuestionFragment() {
@@ -59,6 +61,8 @@ public class QuestionFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         listView = view.findViewById(R.id.listQ);
         submitButton = view.findViewById(R.id.submitButton);
+        tvQuestion = view.findViewById(R.id.tvQuestion);
+
         model = new
                 ViewModelProvider(getActivity()).get(BRNViewModel.class);
         model.addQuestion(new Question());
@@ -67,7 +71,8 @@ public class QuestionFragment extends Fragment {
             public void onChanged(List<Question> questions) {
 
                 q = questions.get(0);
-                ArrayList<String> qList = new ArrayList<>();
+                tvQuestion.setText(q.getQuestion());
+                qList = new ArrayList<>();
                 qList.add(q.getAnswers(0));
                 qList.add(q.getAnswers(1));
                 qList.add(q.getAnswers(2));

@@ -14,7 +14,8 @@
             android:id="@+id/tvQuestion"
             android:layout_width="match_parent"
             android:layout_height="127dp"
-            android:text="TextView" />
+            android:text="Question"
+            android:textAlignment="center" />
 
         <ListView
             android:id="@+id/listQ"
